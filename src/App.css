@@ -1,0 +1,120 @@
+/* App.css */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container principal */
+.app-container {
+  background: #1e293b;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Título */
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #38bdf8;
+}
+
+/* Inputs e Botões */
+input[type="text"] {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #38bdf8;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #0284c7;
+}
+
+/* Lista de tarefas */
+ul {
+  list-style: none;
+  margin-top: 1rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+li {
+  background: #334155;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* Checkbox */
+li input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Texto da tarefa */
+li span {
+  flex: 1;
+  font-size: 1rem;
+  color: #f8fafc;
+  word-break: normal;
+  white-space: normal;
+  overflow-wrap: break-word;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Quando a tarefa estiver concluída */
+li span.concluida {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+/* Botão de excluir */
+li button {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+li button:hover {
+  background: #dc2626;
+}
