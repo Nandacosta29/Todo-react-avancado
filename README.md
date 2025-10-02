@@ -1,12 +1,32 @@
-# React + Vite
+# Todo React Avançado
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação de lista de tarefas desenvolvida com **React** e **Vite**, utilizando Hooks, Context API, hooks customizados e memoization para otimização de performance.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Funcionalidades Principais
 
-## Expanding the ESLint configuration
+O usuário pode:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Adicionar uma nova tarefa.
+- Marcar uma tarefa como concluída.
+- Remover tarefas da lista.
+- Filtrar tarefas por status:
+  - Todas
+  - Concluídas
+  - Pendentes
+
+---
+
+## ⚡ Tecnologias Utilizadas
+
+- **React 19**
+- **Vite**
+- **React Hooks** (`useState`, `useEffect`, `useContext`, `useMemo`)
+- **Context API**
+- **Hooks Customizados**
+- **CSS** ou **Styled Components** (dependendo da sua escolha)
+- **localStorage** (opcional, para persistência de dados)
+
+---
+
