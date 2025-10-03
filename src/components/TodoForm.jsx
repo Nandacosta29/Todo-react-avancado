@@ -1,4 +1,3 @@
-// src/components/TodoForm.jsx
 import { useState } from "react";
 import { useTodos } from "../context/TodoContext";
 
@@ -6,21 +5,20 @@ export default function TodoForm() {
   const [text, setText] = useState("");
   const { addTodo } = useTodos();
 
-  function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (text.trim()) {
-      addTodo(text);
-      setText("");
-    }
-  }
+    if (!text.trim()) return;
+    addTodo(text);
+    setText("");
+  };
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: "1rem" }}>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
+        placeholder="Adicionar tarefa"
         value={text}
         onChange={(e) => setText(e.target.value)}
-        placeholder="Digite uma tarefa"
       />
       <button type="submit">Adicionar</button>
     </form>

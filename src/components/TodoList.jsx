@@ -1,5 +1,5 @@
-// src/components/TodoList.jsx
 import { useTodos } from "../context/TodoContext";
+import TodoItem from "./TodoItem";
 
 export default function TodoList() {
   const { todos, toggleTodo, removeTodo } = useTodos();
@@ -7,17 +7,12 @@ export default function TodoList() {
   return (
     <ul>
       {todos.map((todo) => (
-        <li key={todo.id}>
-          <input
-            type="checkbox"
-            checked={todo.completed}
-            onChange={() => toggleTodo(todo.id)}
-          />
-          <span className={todo.completed ? "concluida" : ""}>
-            {todo.text}
-          </span>
-          <button onClick={() => removeTodo(todo.id)}>X</button>
-        </li>
+        <TodoItem
+          key={todo.id}
+          todo={todo}
+          toggleTodo={toggleTodo}
+          removeTodo={removeTodo}
+        />
       ))}
     </ul>
   );
